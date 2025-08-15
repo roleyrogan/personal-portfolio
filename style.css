@@ -1,0 +1,206 @@
+/* General Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #2c2240 0%, #212529 100%);
+    background-attachment: fixed;
+    color: #F8F9FA;
+    margin: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Container for centering content */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(33, 37, 41, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #F8F9FA;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ADB5BD;
+}
+
+/* General Section Styling */
+.full-screen-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 0;
+}
+
+/* Home Section */
+.home-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0;
+}
+
+.home-content p {
+    color: #CED4DA;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    text-align: left;
+}
+
+.about-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Projects Section */
+.projects-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #F8F9FA;
+    color: #212529;
+    padding: 5rem 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project-card h3 {
+    margin: 0;
+}
+
+/* Contact Section */
+.contact-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact-content .email a {
+    font-size: 1.5rem;
+    color: #F8F9FA;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-content .email a:hover {
+    color: #ADB5BD;
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: #F8F9FA;
+    font-size: 1.8rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ADB5BD;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        display: none; /* Simple responsive solution, can be replaced with a hamburger menu */
+    }
+}
